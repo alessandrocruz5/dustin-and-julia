@@ -15,6 +15,10 @@ export default {
         latte: "#dbc3af",
         terracota: "#854626",
       },
+      fontFamily: {
+        ebBold: ["var(--font-eb-garamond-bold)"],
+        ebGaramond: ["var(--font-eb-garamond)"],
+      },
     },
   },
   plugins: [],
