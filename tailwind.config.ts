@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        linen: "#f3ece2",
+        latte: "#dbc3af",
+        terracota: "#854626",
       },
     },
   },
