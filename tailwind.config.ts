@@ -12,8 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         linen: "#f3ece2",
+        fair: "#e8d4c3",
         latte: "#dbc3af",
-        terracota: "#854626",
+        fawn: "#a3846d",
+        burnt: "#9b7750",
+        terracotta: "#854626",
       },
       fontFamily: {
         ebBold: ["var(--font-eb-garamond-bold)"],

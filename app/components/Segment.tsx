@@ -1,10 +1,19 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-function Segment({ children, direction = "row" }) {
+interface SegmentProps {
+  children: ReactNode;
+  direction?: "row" | "col";
+}
+
+function Segment({ children, direction = "row" }: SegmentProps) {
   return (
     <div className="w-full h-screen py-[20rem]">
       <div className={`flex flex-${direction} h-full justify-between px-60`}>
-        {direction === "row" ? <>{children}</> : <>{children}</>}
+        {direction === "row" ? (
+          <>{children}</>
+        ) : (
+          <div className="space-y-5">{children}</div>
+        )}
       </div>
     </div>
   );
