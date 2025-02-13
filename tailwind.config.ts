@@ -17,6 +17,12 @@ export default {
         fawn: "#a3846d",
         burnt: "#9b7750",
         terracotta: "#854626",
+        silverpink: "#bcb4a5",
+        artichoke: "#988f6f",
+        pastelgray: "#d3cbb9",
+        pastelbeige: "#d4cbba",
+        beaver: "#a4846c",
+        tan: "#d2bc96",
       },
       fontFamily: {
         ebBold: ["var(--font-eb-garamond-bold)"],

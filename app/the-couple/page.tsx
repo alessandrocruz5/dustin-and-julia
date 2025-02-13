@@ -15,6 +15,7 @@ import FaithSection from "../components/FaithSection";
 import BackstorySection from "../components/BackstorySection";
 import ValueSection from "../components/ValueSection";
 import Footer from "../components/Footer";
+import PageTitle from "../components/PageTitle";
 
 function CouplePage() {
   return (
@@ -22,10 +23,12 @@ function CouplePage() {
       <div className="fixed top-0 z-50 w-full">
         <Navbar />
       </div>
-      <div className="flex flex-col justify-center items-center h-screen">
-        <Image src={flowerImage} alt="flower" className="w-[400px] h-[400px]" />
-        <p className="text-terracotta text-8xl font-bold">get to know us</p>
-      </div>
+      <PageTitle
+        image={flowerImage}
+        title="get to know us"
+        width={400}
+        height={400}
+      />
       <Segment>
         <div className="w-full md:w-1/2">
           <Image
