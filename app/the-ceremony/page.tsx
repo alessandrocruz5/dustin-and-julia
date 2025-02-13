@@ -11,7 +11,7 @@ import ceremonyImage from "@/public/assets/graphics/Rings.png";
 import snacksImage from "@/public/assets/graphics/Skewers.png";
 import celebrationImage from "@/public/assets/graphics/Fan.png";
 import dressImage from "@/public/assets/graphics/Dress.png";
-import barongImage from "@/public/assets/graphics/Barong.png";
+import barongImage from "@/public/assets/graphics/barong.png";
 import Footer from "../components/Footer";
 import ColorPalette from "../components/ColorPalette";
 
