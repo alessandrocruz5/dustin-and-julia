@@ -4,10 +4,10 @@ import PageTitle from "../components/PageTitle";
 import Image from "next/image";
 
 import sunImage from "@/public/assets/graphics/Sunburnt.png";
-import coconutImage from "@/public/assets/graphics/Coconutburnt.png"
-import flowerImage from "@/public/assets/graphics/Gumamelaburnt.png"
-import treeImage from "@/public/assets/graphics/Palm treeburnt.png"
-import cactusImage from "@/public/assets/graphics/Cactusburnt.png"
+import coconutImage from "@/public/assets/graphics/Coconutburnt.png";
+import flowerImage from "@/public/assets/graphics/Gumamelaburnt.png";
+import treeImage from "@/public/assets/graphics/Palm treeburnt.png";
+import cactusImage from "@/public/assets/graphics/Cactusburnt.png";
 import EntourageCard from "../components/EntourageCard";
 import crossSm from "@/public/assets/graphics/cross-sm.png";
 import Footer from "../components/Footer";
@@ -18,68 +18,72 @@ function EntouragePage() {
       <div className="fixed top-0 z-50 w-full">
         <Navbar />
       </div>
-      <div className="h-screen flex justify-center items-center text-terracotta text-8xl font-bold">entourage</div>
+      <div className="h-screen flex justify-center items-center text-terracotta text-8xl font-bold">
+        entourage
+      </div>
       <div className="relative mt-32">
-      <div className="fixed inset-0 w-full -z-10">
-          {/* Top right coconut */}
-          <div className="absolute top-0 right-[-4rem]">
-            <Image
-              src={coconutImage}
-              alt="coconut graphic"
-              width={400}
-              height={400}
-              className="rotate-[0.5rad]"
-            />
-          </div>
-          <div className="absolute top-[12rem] left-[10rem]">
-            <Image
-              src={coconutImage}
-              alt="coconut graphic"
-              width={300}
-              height={300}
-              className="-rotate-[0.5rad]"
-            />
-          </div>
-
-          {/* Middle left cactus */}
-          <div className="absolute top-16 left-8">
+        <div className="fixed inset-0 w-full -z-10">
+          {/* left */}
+          <div className="absolute top-[5rem] left-[0rem]">
             <Image
               src={cactusImage}
               alt="cactus graphic"
-              width={220}
-              height={220}
-              className="-rotate-[0.2rad]"
+              width={200}
+              className="-rotate-[0.3rad]"
             />
           </div>
-
-          {/* Bottom right flower */}
-          <div className="absolute bottom-0 right-16">
+          <div className="absolute top-[15rem] left-[0rem]">
+            <Image
+              src={coconutImage}
+              alt="coconut graphic"
+              width={200}
+              className="-rotate-[0.3rad]"
+            />
+          </div>
+          <div className="absolute bottom-[7rem] left-[0rem]">
+            <Image
+              src={treeImage}
+              alt="palm tree graphic"
+              width={200}
+              className="rotate-[0.3rad]"
+            />
+          </div>
+          <div className="absolute bottom-[-2rem] left-[0rem]">
             <Image
               src={flowerImage}
               alt="flower graphic"
               width={200}
-              height={200}
+              className="-rotate-[0.3rad]"
             />
           </div>
 
-          {/* Bottom left palm tree */}
-          <div className="absolute bottom-[-10rem] left-[-7rem]">
+          {/* right */}
+          <div className="absolute top-[5rem] right-[0rem]">
             <Image
-              src={treeImage}
-              alt="palm tree graphic"
-              width={400}
-              height={150}
-              className="rotate-[0.4rad]"
+              src={cactusImage}
+              alt="cactus graphic"
+              width={200}
+              className="rotate-[0.3rad]"
             />
           </div>
-          <div className="absolute bottom-[10rem] right-[-4rem]">
+          <div className="absolute top-[15rem] right-[0rem]">
+            <Image
+              src={coconutImage}
+              alt="coconut graphic"
+              width={200}
+              className="rotate-[0.3rad]"
+            />
+          </div>
+          <div className="absolute bottom-[7rem] right-[0rem]">
             <Image
               src={treeImage}
               alt="palm tree graphic"
               width={200}
-              height={150}
-              className="-rotate-[0.7rad]"
+              className="-rotate-[0.3rad]"
             />
+          </div>
+          <div className="absolute bottom-[-2rem] right-[0rem]">
+            <Image src={flowerImage} alt="flower graphic" width={200} />
           </div>
         </div>
         <div className="relative z-10">
