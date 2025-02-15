@@ -26,18 +26,18 @@ function CouplePage() {
       <PageTitle
         image={flowerImage}
         title="get to know us"
-        width={400}
-        height={400}
+        width={300}
+        height={300}
       />
       <Segment>
         <div className="w-full md:w-1/2">
           <Image
             src={foundationImage}
             alt="JUDU ENGAGEMENT-36"
-            className="rounded-3xl object-cover w-full aspect-square"
+            className="rounded-3xl object-cover aspect-square w-[30rem] h-[30rem]"
           />
         </div>
-        <div className="aspect-square flex flex-col justify-between w-full md:w-1/2 space-y-8">
+        <div className="aspect-square flex flex-col justify-between h-[30rem] md:w-1/2 space-y-8">
           <h2 className="text-4xl md:text-5xl text-terracotta font-extrabold">
             our foundation
           </h2>
