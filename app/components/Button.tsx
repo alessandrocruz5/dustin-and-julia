@@ -18,27 +18,25 @@ function Button({
 }: ButtonProps) {
   const buttonContent = (
     <div className="flex justify-evenly">
-      <div className="flex items-center text-3xl font-bold justify-center">
+      <div className="flex items-center xl:text-3xl md:text-2xl xs:text-lg font-bold justify-center">
         {title}
       </div>
       <div>
         <Image
           src={arrowImage}
           alt="arrow"
-          width={40}
-          className="flex items-center justify-center"
+          className="flex items-center justify-center xl:w-[3rem] lg:w-[2rem] md:w-[2rem] sm:w-[1.75rem] xs:w-[1.75rem]"
         />
       </div>
     </div>
   );
 
   const buttonClasses =
-    "rounded-xl hover:bg-fair hover:text-terracotta bg-latte border-terracotta border-solid border-2 w-56 h-16 text-terracotta";
+    "rounded-xl hover:bg-fair hover:text-terracotta bg-latte border-terracotta border-solid border-2 xl:w-[14rem] lg:w-[12rem] md:w-[10rem] sm:w-[8rem] xs:w-[8rem] xl:h-[5rem] lg:h-[4.5rem] md:h-[4rem] sm:h-[3.5rem] xs:h-[3rem] text-terracotta";
 
   return (
     <div className={cssStyles}>
       {external ? (
-        // External link using regular anchor tag
         <a
           href={href}
           target="_blank"
@@ -48,7 +46,6 @@ function Button({
           {buttonContent}
         </a>
       ) : (
-        // Internal link using Next.js Link component
         <Link href={href}>
           <button className={buttonClasses}>{buttonContent}</button>
         </Link>
