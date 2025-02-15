@@ -1,9 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import PageTitle from "../components/PageTitle";
 import Image from "next/image";
 
-import sunImage from "@/public/assets/graphics/Sunburnt.png";
 import coconutImage from "@/public/assets/graphics/Coconutburnt.png";
 import flowerImage from "@/public/assets/graphics/Gumamelaburnt.png";
 import treeImage from "@/public/assets/graphics/Palm treeburnt.png";
