@@ -14,7 +14,7 @@ function FaithSection({ image }: FaithSectionProps) {
             <Image
               src={image}
               alt="Couple left side"
-              className="object-cover object-right h-full w-full scale-[2.5] origin-[60%_65%]"
+              className="object-cover object-right h-full w-full scale-[2] origin-[60%_70%]"
               priority
               fill
             />
@@ -22,12 +22,12 @@ function FaithSection({ image }: FaithSectionProps) {
         </div>
         <div className="flex items-center justify-center px-8 bg-latte">
           <div className="max-w-xl space-y-6 text-center">
-            <h2 className="text-terracotta text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-terracotta text-2xl md:text-4xl font-bold mb-6">
               a love rooted in faith
             </h2>
             <div className="space-y-10">
-              <p className="text-terracotta text-lg md:text-2xl font-medium leading-relaxed">
-                dustin and julia&aposs love story began serving side-by-side at
+              <p className="text-terracotta text-lg md:text-xl font-medium leading-relaxed">
+                dustin and julia&apos;s love story began serving side-by-side at
                 their church, where they fostered a deep and strong foundation
                 in Christ. blossoming into a life-long love, they grew together,
                 serving the next generation and His truth as they spent time in
@@ -52,7 +52,7 @@ function FaithSection({ image }: FaithSectionProps) {
             <Image
               src={image}
               alt="Couple left side"
-              className="object-cover object-right h-full w-full scale-[2.5] origin-[100%_70%]"
+              className="object-cover object-right h-full w-full scale-[2] origin-[120%_80%]"
               priority
               fill
             />

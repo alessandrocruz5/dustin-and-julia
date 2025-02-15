@@ -52,12 +52,12 @@ function SidePanel({ isOpen, onClose }: SidePanelProps) {
               >
                 the entourage
               </Link>
-              <Link
+              {/* <Link
                 href="/the-registry"
                 className="block text-4xl font-bold p-6 hover:bg-linen rounded-2xl"
               >
                 the registry
-              </Link>
+              </Link> */}
               <Link
                 className="block text-4xl font-bold p-6 hover:bg-linen rounded-2xl"
                 href="https://www.instagram.com/dustinandjulia/?hl=en"
