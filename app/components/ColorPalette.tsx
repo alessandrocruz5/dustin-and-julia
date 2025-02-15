@@ -20,7 +20,7 @@ function Circle({ color }: CircleProps) {
     tan: "bg-tan",
   };
 
-  return <div className={`w-16 h-16 rounded-full ${colorClasses[color]}`} />;
+  return <div className={`w-[3rem] h-[3rem] rounded-full ${colorClasses[color]}`} />;
 }
 
 function ColorPalette() {

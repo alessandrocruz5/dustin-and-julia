@@ -13,7 +13,7 @@ function Segment({ children, direction = "row" }: SegmentProps) {
           max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-full
           ${
             direction === "row"
-              ? "flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16"
+              ? "flex flex-col md:flex-row justify-around items-center gap-8 md:gap-16"
               : "flex flex-col gap-8"
           }
         `}

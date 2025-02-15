@@ -18,8 +18,8 @@ function BackstorySection({ image }: BackstorySectionProps) {
           showDustin ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="text-5xl">dustin</div>
-        <div className="text-2xl space-y-6">
+        <div className="text-4xl">dustin</div>
+        <div className="text-xl space-y-6">
           <div>
             dustin is the kind of person whose quiet demeanor speaks volumes. an
             introvert at heart, he carries wisdom and passion that is evident in
@@ -38,7 +38,7 @@ function BackstorySection({ image }: BackstorySectionProps) {
         </div>
       </div>
       <div className="w-full flex justify-center items-center relative">
-        <div className="relative w-[70%]">
+        <div className="relative w-[55%]">
           <div className="relative">
             <Image
               src={image}
@@ -68,8 +68,8 @@ function BackstorySection({ image }: BackstorySectionProps) {
           showJulia ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="text-5xl">julia</div>
-        <div className="text-2xl space-y-4">
+        <div className="text-4xl">julia</div>
+        <div className="text-xl space-y-4">
           <div>
             julia is a passionate and purposeful individual who pours her heart
             into everything she does. a proud multi-passionate, she embraces

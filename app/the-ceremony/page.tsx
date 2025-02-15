@@ -21,7 +21,7 @@ function CeremonyPage() {
       <div className="fixed top-0 z-50 w-full">
         <Navbar />
       </div>
-      <PageTitle image={titleImage} title="venue" width={250} />
+      <PageTitle image={titleImage} title="venue" width={170} />
       <div className="h-screen flex flex-col items-center text-terracotta text-center">
         <Image src={venueImage} alt="monochrome" className="w-[60%]" />
         <div className="text-5xl font-bold">the monochrome, nuvali</div>
@@ -31,13 +31,13 @@ function CeremonyPage() {
       </div>
       <div className="h-screen flex flex-col items-center text-terracotta text-center space-y-20">
         <div className="font-bold text-6xl">schedule</div>
-        <div className="grid grid-cols-[1fr,1fr,1fr,1fr]">
+        <div className="grid grid-cols-4 gap-8 w-full max-w-6xl px-4">
           <ImageCard
             image={welcomeImage}
             time="3:00PM"
             title="welcome"
             subtitle="monochrome lobby"
-            height={200}
+            height={150}
           />
           <ImageCard
             image={ceremonyImage}
@@ -59,7 +59,7 @@ function CeremonyPage() {
           />
         </div>
       </div>
-      <div className="h-screen flex flex-col items-center text-terracotta space-y-8">
+      <div className="h-screen flex flex-col items-center text-terracotta space-y-8 mb-20">
         <div className="font-bold text-6xl">dress code</div>
         <div className="space-y-16">
           <div className="grid grid-cols-[2fr,2fr,2fr]">
@@ -68,7 +68,7 @@ function CeremonyPage() {
               time="ladies"
               title="cocktail dress"
               subtitle="long or tea length"
-              height={350}
+              height={270}
             />
             <div></div>
             <ImageCard
@@ -76,7 +76,7 @@ function CeremonyPage() {
               time="gentlemen"
               title="barong tagalog"
               subtitle="regular collar & black slacks"
-              height={350}
+              height={270}
             />
           </div>
           <ColorPalette />
