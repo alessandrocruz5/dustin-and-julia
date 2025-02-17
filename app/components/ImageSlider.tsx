@@ -17,7 +17,7 @@ const ImageSlide: React.FC<SlideProps> = ({ image, text, alt }) => {
 
   return (
     <div
-      className="relative w-[13rem] h-[13rem] rounded-2xl overflow-hidden cursor-pointer shrink-0"
+      className="relative w-80 h-80 rounded-2xl overflow-hidden cursor-pointer shrink-0"
       onClick={() => setIsTextVisible(!isTextVisible)}
     >
       <Image
@@ -27,16 +27,16 @@ const ImageSlide: React.FC<SlideProps> = ({ image, text, alt }) => {
           isTextVisible ? "brightness-[0.3]" : "brightness-100"
         }`}
         fill
-        sizes="(max-width: 768px) 12rem,
-               (max-width: 1200px) 12rem,
-               12rem"
+        sizes="(max-width: 768px) 20rem,
+               (max-width: 1200px) 20rem,
+               20rem"
       />
       <div
         className={`absolute inset-0 flex items-center justify-center p-4 text-center
-                   transition-opacity duration-300 text-linen font-bold italic
+                   transition-opacity duration-300 text-white font-bold italic
                    ${isTextVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <p className="text-3xl">{text}</p>
+        <p className="text-5xl">{text}</p>
       </div>
     </div>
   );
@@ -96,21 +96,11 @@ const ImageSlider = () => {
     sliderRef.current!.scrollLeft = scrollLeft - walk;
   };
 
-  const scroll = (direction: "left" | "right") => {
-    if (sliderRef.current) {
-      const scrollAmount = direction === "left" ? -320 : 320;
-      sliderRef.current.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section className="relative w-screen max-w-full overflow-hidden">
       <div
         ref={sliderRef}
-        className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar"
+        className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar px-4 py-8"
         onMouseDown={startDragging}
         onMouseUp={stopDragging}
         onMouseLeave={stopDragging}
@@ -129,20 +119,6 @@ const ImageSlider = () => {
           />
         ))}
       </div>
-      {/* 
-      <button
-        onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-
-      <button
-        onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button> */}
     </section>
   );
 };
