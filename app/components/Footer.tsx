@@ -3,28 +3,37 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="relative h-screen w-full overflow-hidden">
-      {/* Main footer content */}
-      <div className="absolute bg-latte px-8 pt-16 pb-8 mt-auto text-center xl:w-[140%] lg:w-[150%] md:w-[160%] sm:w-[170%] xs:w-[180%] h-[140%] rounded-[100%] transform translate-y-[20%] xl:translate-x-[-15%] lg:translate-x-[-17%] md:translate-x-[-19%] sm:translate-x-[-21%] xs:translate-x-[-23%]">
-        <h2 className="text-terracotta font-bold italic xl:text-8xl md:text-7xl xs:text-6xl mb-2 mt-[4rem]">
-          dustin & julia
-        </h2>
-        <div className="text-terracotta font-bold xl:text-3xl md:text-2xl xs:text-xl xl:space-x-40 lg:space-x-35 md:space-x-30 sm:space-x-25 xs:space-x-20 my-[3rem]">
+    <footer className="h-screen overflow-hidden relative py-12 mt-16">
+      <div className="absolute bottom-0 left-[-18rem] w-[250%] h-[70%] rounded-t-[35rem] bg-latte mx-auto px-4 text-center space-y-10">
+        <div className="pt-[5rem]">
+          <div className="text-terracotta font-bold italic text-7xl mb-4">
+            dustin{" "}
+          </div>
+          <div className="text-terracotta font-bold italic text-7xl mb-4">
+            &
+          </div>
+          <div className="text-terracotta font-bold italic text-7xl mb-4">
+            julia
+          </div>
+        </div>
+        <div className="space-x-4 mb-4">
           <Link
             href="https://www.instagram.com/dustindagamac/?hl=en"
             target="_blank"
+            className="text-terracotta font-bold text-2xl"
           >
-            <span className="hover:underline">@dustindagamac</span>
+            @dustindagamac
           </Link>
           <Link
             href="https://www.instagram.com/juliamorados/?hl=en"
             target="_blank"
+            className="text-terracotta font-bold text-2xl"
           >
-            <span className="hover:underline">@juliamorados</span>
+            @juliamorados
           </Link>
         </div>
-        <div className="mt-4 font-bold text-terracotta xl:text-2xl md:text-xl xs:text-lg">
-          <p>designed and developed by</p>
+        <div className="text-xl text-terracotta font-bold">
+          <p className="mb-1">designed and developed by</p>
           <Link
             href="mailto:alessandrorafaelcruz@gmail.com"
             target="_blank"

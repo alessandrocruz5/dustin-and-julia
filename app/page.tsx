@@ -14,9 +14,9 @@ import ceremonyImage from "@/public/assets/graphics/Monochrome.jpg";
 import rsvpImage from "@/public/assets/photos/JUDU ENGAGEMENT-68.jpg";
 import Footer from "@/app/components/Footer";
 import Link from "next/link";
+import MobileLanding from "./components/MobileLanding";
 
 function LandingPage() {
-
   const useMobileDetect = (breakpoint = 768) => {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -24,15 +24,9 @@ function LandingPage() {
       const checkMobile = () => {
         setIsMobile(window.innerWidth < breakpoint);
       };
-
-      // Check on initial load
       checkMobile();
-
-      // Add event listener for window resize
-      window.addEventListener('resize', checkMobile);
-
-      // Cleanup
-      return () => window.removeEventListener('resize', checkMobile);
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
     }, [breakpoint]);
 
     return isMobile;
@@ -41,122 +35,68 @@ function LandingPage() {
   const isMobile = useMobileDetect();
 
   return (
-    <>
-      <div className="fixed top-0 z-50 w-full">
-        <Navbar />
-      </div>
-      <div className="w-full h-screen relative overflow-hidden xl:mb-[15rem] lg:mb-[12rem] md:mb-[9rem] sm:mb-[6rem] xs:mb-[3rem]">
-        <Image
-          className="absolute brightness-[0.75] object-cover transform -translate-x-[4%] -translate-y-[20%] scale-[1.2]"
-          src={spinImage}
-          alt="JUDU ENGAGEMENT-63"
-        />
-        <div className="absolute z-10 top-1/2 left-1/2 transform xl:-translate-x-1/2 xl:-translate-y-[-40%] lg:translate-y-[90%] md:-translate-x-1/2  md:translate-y-[30%] sm:-translate-x-1/2 sm:translate-y-[-30%]">
-          <h1 className="xl:pb-5 lg:pb-3 md:pb-1 xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl font-bold text-center text-linen">
-            dustin & julia
-          </h1>
-          <h2 className="xl:pt-5 lg:pb-3 md:pb-1 xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl font-bold text-center text-linen">
-            5.5.2025
-          </h2>
-        </div>
-      </div>
-      <Segment isMobile={isMobile}>
-        <div className={isMobile ? "w-full" : "flex flex-col justify-between xl:h-[25rem] lg:h-[22rem] md:h-[19rem] sm:h-[25rem] xs:h-[13rem]"}>
-          <h2 className="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl xs:text-4xl text-terracotta font-extrabold">
-            the couple
-          </h2>
-          <Button title="about us" cssStyles={isMobile ? "mt-4" : "mr-auto"} href="/the-couple" />
-        </div>
-
-        <div className={isMobile ? "w-full" : "w-1/2 flex justify-end"}>
-          <Image
-            src={coupleImage}
-            alt="JUDU ENGAGEMENT-36"
-            className="rounded-[2rem] object-cover xl:w-[25rem] lg:w-[22rem] md:w-[19rem] sm:w-[30rem] xs:w-[13rem] xl:h-[25rem] lg:h-[22rem] md:h-[19rem] sm:h-[25rem] xs:h-[13rem]"
-          />
-        </div>
+    <div className="min-h-screen bg-linen min-w-screen">
+      <Navbar />
+      <MobileLanding image={spinImage} />
+      <Segment
+        image={coupleImage}
+        buttonStyles="ml-auto"
+        buttonTitle="about us"
+        buttonLink="the-couple"
+      >
+        <h2>the</h2>
+        <h2>couple</h2>
       </Segment>
-      <Segment>
-      <div>
-          <Image
-            src={ceremonyImage}
-            alt="JUDU ENGAGEMENT-36"
-            className="rounded-[5%] object-cover xl:w-[25rem] lg:w-[22rem] md:w-[19rem] sm:w-[16rem] xs:w-[13rem] xl:h-[25rem] lg:h-[22rem] md:h-[19rem] sm:h-[16rem] xs:h-[13rem]"
-          />
-        </div>
-        <div className="flex flex-col justify-between xl:h-[25rem] lg:h-[22rem] md:h-[19rem] sm:h-[16rem] xs:h-[13rem]">
-          <h2 className="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl xs:text-4xl text-terracotta font-extrabold">
-            the ceremony
-          </h2>
-          <Button title="details" cssStyles="ml-auto" href="/the-ceremony" />
-        </div>
+      <Segment
+        image={ceremonyImage}
+        textStyle="text-right"
+        buttonStyles="mr-auto"
+        buttonTitle="details"
+        buttonLink="the-ceremony"
+      >
+        <h2>the</h2>
+        <h2>ceremony</h2>
       </Segment>
-      <Segment direction="col">
-        <div>
-          <Image
-            src={spinImage}
-            alt="JUDU ENGAGEMENT-36"
-            className="rounded-3xl object-cover w-full h-[25rem]"
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <h2 className="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl xs:text-4xl text-terracotta font-extrabold">
-            the entourage
-          </h2>
-          <Button
-            title="details"
-            cssStyles="ml-auto mt-auto"
-            href="/the-entourage"
-          />
-        </div>
+      <Segment
+        image={spinImage}
+        buttonStyles="ml-auto"
+        buttonTitle="details"
+        buttonLink="the-entourage"
+      >
+        <h2>the</h2>
+        <h2>entourage</h2>
       </Segment>
-      {/* <Segment>
-        <div>
-          <Image
-            src={registryImage}
-            alt="JUDU ENGAGEMENT-36"
-            className="rounded-[5%] object-cover w-[25rem] h-[25rem]"
-          />
-        </div>
-        <div className="flex flex-col justify-between h-[25rem]">
-          <h2 className="text-8xl text-terracotta font-extrabold">
-            the registry
-          </h2>
-          <Button title="about us" cssStyles="ml-auto" href="/the-registry" />
-        </div>
-      </Segment> */}
-      <Segment>
-        <div className="flex flex-col justify-between xl:h-[25rem] lg:h-[22rem] md:h-[19rem] sm:h-[16rem] xs:h-[13rem]">
-          <h2 className="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl xs:text-4xl text-terracotta font-extrabold">rsvp</h2>
-          <div className="space-y-5">
-            <div className="space-y-4">
-              <h3 className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl xs:text-lg text-terracotta font-extrabold">
-                please message us on instagram by
-              </h3>
-              <h3 className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl xs:text-lg text-linen bg-terracotta xl:w-[10rem] lg:w-[9rem] md:w-[8rem] sm:w-[7rem] xs:[6rem] p-2 font-extrabold text-center rounded-2xl">
-                march 31
-              </h3>
-            </div>
-            <p className="w-[21rem] xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl text-terracotta font-extrabold hover:underline">
-              <Link
-                href="https://www.instagram.com/dustinandjulia/?hl=en"
+      <section className="w-full min-h-screen flex flex-col justify-center items-center">
+        <div className="w-full max-w-xl p-[2rem] px-8 py-[12rem] space-y-10">
+          <div className="text-terracotta space-y-1 text-5xl font-bold text-center">
+            <h2>rsvp</h2>
+          </div>
+          <div className="relative w-full">
+            <Image
+              src={rsvpImage}
+              alt="the couple"
+              className="object-cover aboslute rounded-3xl aspect-square object-top"
+            />
+          </div>
+          <div className="text-terracotta text-[1.4em] font-bold">
+            <p>please message us on instagram by</p>
+            <p className="bg-terracotta text-linen px-3 w-[7rem] rounded-lg">
+              march 31
+            </p>
+            <div className="mt-[2rem]">
+              <a
+                className="text-2xl"
                 target="_blank"
+                href="https://www.instagram.com/dustinandjulia/?hl=en"
               >
                 @dustinandjulia
-              </Link>
-            </p>
+              </a>
+            </div>
           </div>
         </div>
-        <div>
-          <Image
-            src={rsvpImage}
-            alt="JUDU ENGAGEMENT-36"
-            className="rounded-[5%] object-cover xl:w-[25rem] lg:w-[22rem] md:w-[19rem] sm:w-[16rem] xs:w-[13rem] xl:h-[25rem] lg:h-[22rem] md:h-[19rem] sm:h-[16rem] xs:h-[13rem]"
-          />
-        </div>
-      </Segment>
+      </section>
       <Footer />
-    </>
+    </div>
   );
 }
 

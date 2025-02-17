@@ -16,26 +16,26 @@ function Button({
   href,
   external = false,
 }: ButtonProps) {
+  const buttonClasses = `
+    group flex items-center gap-2 
+    px-6 py-3 rounded-2xl border-2 border-terracotta
+    bg-latte text-terracotta font-bold
+    ${cssStyles}
+  `;
+
   const buttonContent = (
-    <div className="flex justify-evenly">
-      <div className="flex items-center xl:text-3xl md:text-2xl xs:text-lg font-bold justify-center">
-        {title}
-      </div>
-      <div>
-        <Image
-          src={arrowImage}
-          alt="arrow"
-          className="flex items-center justify-center xl:w-[3rem] lg:w-[2rem] md:w-[2rem] sm:w-[1.75rem] xs:w-[1.75rem]"
-        />
-      </div>
+    <div className="flex items-center gap-2">
+      <span>{title}</span>
+      <Image
+        src={arrowImage}
+        alt="arrow"
+        className="w-6 h-6 transition-transform duration-300"
+      />
     </div>
   );
 
-  const buttonClasses =
-    "rounded-xl hover:bg-fair hover:text-terracotta bg-latte border-terracotta border-solid border-2 xl:w-[14rem] lg:w-[12rem] md:w-[10rem] sm:w-[8rem] xs:w-[8rem] xl:h-[5rem] lg:h-[4.5rem] md:h-[4rem] sm:h-[3.5rem] xs:h-[3rem] text-terracotta";
-
   return (
-    <div className={cssStyles}>
+    <div>
       {external ? (
         <a
           href={href}

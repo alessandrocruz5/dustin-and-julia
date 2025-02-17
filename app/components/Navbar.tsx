@@ -17,16 +17,25 @@ function Navbar() {
 
   return (
     <>
-      <nav className="bg-latte xl:h-20 lg:h-16 md:h-12 sm:h-10 xs:h-8 sticky z-40 w-full flex justify-between items-center">
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <Link href="/">
-            <Image src={logoImage} alt="logo" className="xl:h-[2.75rem] xl:w-[2rem] lg:h-[2.5rem] lg:w-[1.75rem] md:h-[2.25rem] md:w-[1.5rem] sm:h-[2rem] sm:w-[1.25rem] xs:h-[1.75rem] xs:w-[1.25rem]" />
-          </Link>
-        </div>
-        <div className="ml-auto pr-10">
-          <button onClick={togglePanel}>
-            <Image src={burgerMenu} alt="menu" className="xl:h-[3.75rem] xl:w-[2.75rem] lg:h-[3.5rem] lg:w-[2.5rem] md:h-[3.25rem] md:w-[2.25rem] sm:h-[3rem] sm:w-[2rem] xs:h-[2.75rem] xs:w-[1.75rem]" />
-          </button>
+      <nav className="fixed w-screen h-[4rem] bg-latte z-[998]">
+        <div className="flex justify-between items-center h-full">
+          <div className="flex justify-center items-center">
+            <Link href="/">
+              <Image
+                src={logoImage}
+                alt="dustin & julia"
+                className="w-[1.7rem] flex justify-center ml-4"
+              />
+            </Link>
+          </div>
+          <div>
+            <Image
+              src={burgerMenu}
+              alt="burger menu"
+              className="w-[2rem] mr-4"
+              onClick={togglePanel}
+            />
+          </div>
         </div>
       </nav>
 
