@@ -29,7 +29,7 @@ function CouplePage() {
         width={300}
         height={300}
       />
-      <Segment>
+      {/* <Segment>
         <div className="w-full md:w-1/2">
           <Image
             src={foundationImage}
@@ -50,7 +50,7 @@ function CouplePage() {
             lamentations 3:22-23
           </p>
         </div>
-      </Segment>
+      </Segment> */}
       <FaithSection image={faithImage} />
       <BackstorySection image={backstoryImage} />
       <ValueSection

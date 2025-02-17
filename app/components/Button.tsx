@@ -16,29 +16,27 @@ function Button({
   href,
   external = false,
 }: ButtonProps) {
+  const buttonClasses = `
+    group flex items-center gap-2 
+    px-6 py-3 rounded-2xl border-2 border-terracotta
+    bg-latte text-terracotta font-bold
+    ${cssStyles}
+  `;
+
   const buttonContent = (
-    <div className="flex justify-evenly">
-      <div className="flex items-center text-3xl font-bold justify-center">
-        {title}
-      </div>
-      <div>
-        <Image
-          src={arrowImage}
-          alt="arrow"
-          width={40}
-          className="flex items-center justify-center"
-        />
-      </div>
+    <div className="flex items-center gap-2">
+      <span>{title}</span>
+      <Image
+        src={arrowImage}
+        alt="arrow"
+        className="w-6 h-6 transition-transform duration-300"
+      />
     </div>
   );
 
-  const buttonClasses =
-    "rounded-xl hover:bg-fair hover:text-terracotta bg-latte border-terracotta border-solid border-2 w-56 h-16 text-terracotta";
-
   return (
-    <div className={cssStyles}>
+    <div>
       {external ? (
-        // External link using regular anchor tag
         <a
           href={href}
           target="_blank"
@@ -48,7 +46,6 @@ function Button({
           {buttonContent}
         </a>
       ) : (
-        // Internal link using Next.js Link component
         <Link href={href}>
           <button className={buttonClasses}>{buttonContent}</button>
         </Link>
