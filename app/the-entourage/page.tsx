@@ -13,10 +13,10 @@ import Footer from "../components/Footer";
 function EntouragePage() {
   return (
     <>
-      <div className="fixed top-0 z-50 w-full">
+      <div className="fixed top-0 z-[999] w-full">
         <Navbar />
       </div>
-      <div className="h-screen flex justify-center items-center text-terracotta text-8xl font-bold">
+      <div className="h-screen flex justify-center items-center text-terracotta text-7xl font-bold">
         entourage
       </div>
       <div className="relative mt-32">
@@ -30,23 +30,23 @@ function EntouragePage() {
               className="-rotate-[0.3rad]"
             />
           </div>
-          <div className="absolute top-[15rem] left-[0rem]">
+          {/* <div className="absolute top-[15rem] left-[0rem]">
             <Image
               src={coconutImage}
               alt="coconut graphic"
               width={200}
               className="-rotate-[0.3rad]"
             />
-          </div>
-          <div className="absolute bottom-[7rem] left-[0rem]">
+          </div> */}
+          {/* <div className="absolute bottom-[7rem] left-[0rem]">
             <Image
               src={treeImage}
               alt="palm tree graphic"
               width={200}
               className="rotate-[0.3rad]"
             />
-          </div>
-          <div className="absolute bottom-[-2rem] left-[0rem]">
+          </div> */}
+          <div className="absolute bottom-[15rem] left-[0rem]">
             <Image
               src={flowerImage}
               alt="flower graphic"
@@ -56,14 +56,14 @@ function EntouragePage() {
           </div>
 
           {/* right */}
-          <div className="absolute top-[5rem] right-[0rem]">
+          {/* <div className="absolute top-[5rem] right-[0rem]">
             <Image
               src={cactusImage}
               alt="cactus graphic"
               width={200}
               className="rotate-[0.3rad]"
             />
-          </div>
+          </div> */}
           <div className="absolute top-[15rem] right-[0rem]">
             <Image
               src={coconutImage}
@@ -77,7 +77,7 @@ function EntouragePage() {
               src={treeImage}
               alt="palm tree graphic"
               width={200}
-              className="-rotate-[0.3rad]"
+              className="-rotate-[-0.3rad]"
             />
           </div>
           <div className="absolute bottom-[-2rem] right-[0rem]">
@@ -97,16 +97,16 @@ function EntouragePage() {
             <div>michael a. paredes</div>
           </EntourageCard>
           <EntourageCard title="principal sponsors">
-            <div className="flex justify-between">
-              <div className="w-[600] flex flex-col space-y-4 text-right">
+            <div className="flex space-x-4">
+              <div className="flex flex-col space-y-4 text-center w-full">
                 <div>michael a. paredes</div>
                 <div>edgardo antonio q. abad jr.</div>
-                <div className="flex justify-end">
+                <div className="flex justify-center">
                   marino d. que
                   <Image
                     src={crossSm}
                     alt="cross"
-                    width={40}
+                    className="w-[1.3rem] h-[1.5rem]"
                     style={{
                       filter:
                         "invert(27%) sepia(51%) saturate(1000%) hue-rotate(346deg) brightness(88%) contrast(82%)",
@@ -119,8 +119,7 @@ function EntouragePage() {
                 <div>ariel jose g. marquez</div>
                 <div>brian c. lindsey</div>
                 <div>erwan jean a. heussaff</div>
-              </div>
-              <div className="w-[600] flex flex-col space-y-4 text-left">
+                <hr className="mx-auto w-[80%] rounded-2xl border-terracotta border-[0.12rem]" />
                 <div>pia a. paderes</div>
                 <div>charibelle m. abad</div>
                 <div>samantha c. que</div>
@@ -142,13 +141,11 @@ function EntouragePage() {
             <div>samantha grace b. tagala</div>
           </EntourageCard>
           <EntourageCard title="groomsmen">
-            <div className="flex justify-between">
-              <div className="flex flex-col justify-center space-y-4 text-right w-[600]">
+            <div className="flex space-x-4">
+              <div className="flex flex-col justify-center space-y-4 text-center w-full">
                 <div>jaime mari joaquin a. morados</div>
                 <div>john carl b. bautista</div>
                 <div>sean ellis j. raymundo</div>
-              </div>
-              <div className="flex flex-col justify-center space-y-4 text-left w-[600]">
                 <div>james dominic b. belizario</div>
                 <div>jose gabriel v. tagala</div>
                 <div>samuel christopher l. flores</div>
@@ -156,13 +153,11 @@ function EntouragePage() {
             </div>
           </EntourageCard>
           <EntourageCard title="bridesmaids">
-            <div className="flex justify-between">
-              <div className="flex flex-col justify-center space-y-4 text-right w-[600]">
+            <div className="flex space-x-4">
+              <div className="flex flex-col justify-center space-y-4 text-center w-full">
                 <div>sofia p. manaligod</div>
                 <div>kristina a. paderes</div>
                 <div>kiara adrienne c. jaro</div>
-              </div>
-              <div className="flex flex-col justify-center space-y-4 text-left w-[600]">
                 <div>isabel g. vilchez</div>
                 <div>gwyneth p. jardiniano</div>
                 <div>alexandra m. santelices</div>
@@ -176,12 +171,10 @@ function EntouragePage() {
             <div>calista m. abad</div>
           </EntourageCard>
           <EntourageCard title="groom's little dudes">
-            <div className="flex justify-between">
-              <div className="flex flex-col justify-center space-y-4 text-right w-[600]">
+            <div className="flex space-x-4">
+              <div className="flex flex-col justify-center space-y-4 text-center w-full">
                 <div>bucky</div>
                 <div>gusten caleb o. dagamac</div>
-              </div>
-              <div className="flex flex-col justify-center space-y-4 text-left w-[600]">
                 <div>jacob d. mulligan</div>
                 <div>calix kristoffer f. bondoc</div>
               </div>
