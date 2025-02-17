@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="h-screen overflow-hidden relative py-12 mt-16">
+    <footer className="h-screen overflow-hidden relative py-12 mt-[10rem]">
       <div className="absolute bottom-0 left-[-18rem] w-[250%] h-[70%] rounded-t-[35rem] bg-latte mx-auto px-4 text-center space-y-10">
         <div className="pt-[5rem]">
           <div className="text-terracotta font-bold italic text-7xl mb-4">
