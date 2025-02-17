@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import honorImage from "@/public/assets/photos/JUDU ENGAGEMENT-74.jpg";
 import intentionalityImage from "@/public/assets/photos/JUDU ENGAGEMENT-88.jpg";

@@ -9,16 +9,14 @@ import foundationImage from "@/public/assets/photos/JUDU ENGAGEMENT-11.jpg";
 import faithImage from "@/public/assets/photos/JUDU ENGAGEMENT-41.jpg";
 import backstoryImage from "@/public/assets/photos/JUDU ENGAGEMENT-05.jpg";
 
-import FaithSection from "../components/FaithSection";
-import BackstorySection from "../components/BackstorySection";
-import ValueSection from "../components/ValueSection";
+// import FaithSection from "../components/FaithSection";
+// import BackstorySection from "../components/BackstorySection";
+// import ValueSection from "../components/ValueSection";
 import Footer from "../components/Footer";
 import PageTitle from "../components/PageTitle";
 import ImageSlider from "../components/ImageSlider";
 
 function CouplePage() {
-  const [showDustin, setShowDustin] = useState(false);
-  const [showJulia, setShowJulia] = useState(false);
   const [activeProfile, setActiveProfile] = useState<"dustin" | "julia" | null>(
     null
   );
