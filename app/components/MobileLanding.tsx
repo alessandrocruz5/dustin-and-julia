@@ -14,7 +14,7 @@ function MobileLanding({ image }: MobileLandingProps) {
           src={image}
           alt="landing image"
           fill
-          priority
+          loading="lazy"
           className="w-full h-full object-cover transform translate-x-[-1.5rem] scale-[1.2] brightness-75"
         />
       </div>
