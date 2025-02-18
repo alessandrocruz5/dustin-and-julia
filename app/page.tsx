@@ -48,7 +48,7 @@ function LandingPage() {
         <h2>entourage</h2>
       </Segment>
       <section className="w-full min-h-screen flex flex-col justify-center items-center">
-        <div className="w-full max-w-xl p-[2rem] px-8 py-[12rem] space-y-10">
+        <div className="w-full max-w-xl p-[2rem] px-8 py-[12rem] space-y-10 mx-auto">
           <div className="text-terracotta space-y-1 text-5xl font-bold text-center">
             <h2>rsvp</h2>
           </div>

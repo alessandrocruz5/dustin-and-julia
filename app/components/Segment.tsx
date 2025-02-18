@@ -41,8 +41,8 @@ function Segment({
   buttonLink,
 }: SegmentProps) {
   return (
-    <section className="w-full min-h-screenflex flex-col justify-center items-center">
-      <div className="w-full max-w-xl p-[2rem] px-8 py-[12rem] space-y-10">
+    <section className="w-full min-h-screen flex flex-col justify-center items-center">
+      <div className="w-full max-w-xl p-[2rem] px-8 py-[12rem] space-y-10 mx-auto">
         <div
           className={`text-terracotta space-y-1 text-5xl font-bold ${textStyle}`}
         >
