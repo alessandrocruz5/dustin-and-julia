@@ -4,7 +4,22 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "dustin & julia",
-  description: "Welcome to our wedding website!",
+  description: "Join us to celebrate our special day on May 5, 2025",
+  openGraph: {
+    title: "dustin & julia",
+    description: "Join us to celebrate our special day on May 5, 2025",
+    url: "https://yourweddingdomain.com",
+    siteName: "dustin & julia",
+    images: [
+      {
+        url: "/assets/photos/JUDU ENGAGEMENT-63.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 const ebGaramond = EB_Garamond({
