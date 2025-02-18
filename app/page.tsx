@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Navbar from "@/app/components/Navbar";
 import Segment from "@/app/components/Segment";
-import Button from "@/app/components/Button";
 
 import spinImage from "@/public/assets/photos/JUDU ENGAGEMENT-63.jpg";
 import coupleImage from "@/public/assets/photos/JUDU ENGAGEMENT-36.jpg";
@@ -13,27 +12,9 @@ import ceremonyImage from "@/public/assets/graphics/Monochrome.jpg";
 // import registryImage from "@/public/assets/photos/JUDU ENGAGEMENT-22.jpg";
 import rsvpImage from "@/public/assets/photos/JUDU ENGAGEMENT-68.jpg";
 import Footer from "@/app/components/Footer";
-import Link from "next/link";
 import MobileLanding from "./components/MobileLanding";
 
 function LandingPage() {
-  const useMobileDetect = (breakpoint = 768) => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const checkMobile = () => {
-        setIsMobile(window.innerWidth < breakpoint);
-      };
-      checkMobile();
-      window.addEventListener("resize", checkMobile);
-      return () => window.removeEventListener("resize", checkMobile);
-    }, [breakpoint]);
-
-    return isMobile;
-  };
-
-  const isMobile = useMobileDetect();
-
   return (
     <div className="min-h-screen bg-linen min-w-screen">
       <Navbar />
