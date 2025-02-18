@@ -25,6 +25,7 @@ const ImageSlide: React.FC<SlideProps> = ({ image, text, alt }) => {
         className={`object-cover transition-all duration-300 ${
           isTextVisible ? "brightness-[0.3]" : "brightness-100"
         }`}
+        loading="lazy"
         fill
         sizes="(max-width: 768px) 20rem,
                (max-width: 1200px) 20rem,

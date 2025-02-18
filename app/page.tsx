@@ -57,6 +57,7 @@ function LandingPage() {
               src={rsvpImage}
               alt="the couple"
               className="object-cover aboslute rounded-3xl aspect-square object-top"
+              loading="lazy"
             />
           </div>
           <div className="text-terracotta text-[1.4em] font-bold">

@@ -20,7 +20,13 @@ function ImageCard({
 }: ImageCardProps) {
   return (
     <div className="flex flex-col text-center items-center text-terracotta space-y-3">
-      <Image src={image} alt={title} width={width} height={height} />
+      <Image
+        src={image}
+        alt={title}
+        width={width}
+        height={height}
+        loading="lazy"
+      />
       <div className="font-bold text-2xl">{time}</div>
       <div className="font-bold text-4xl">{title}</div>
       <div className="italic text-2xl">{subtitle}</div>

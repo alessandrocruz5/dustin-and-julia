@@ -53,6 +53,7 @@ function Segment({
             src={image}
             alt="the couple"
             className="object-cover aboslute rounded-3xl aspect-square object-top"
+            loading="lazy"
           />
         </div>
         <div>

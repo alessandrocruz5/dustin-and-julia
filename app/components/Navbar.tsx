@@ -25,6 +25,7 @@ function Navbar() {
                 src={logoImage}
                 alt="dustin & julia"
                 className="w-[1.7rem] flex justify-center ml-4"
+                loading="lazy"
               />
             </Link>
           </div>
@@ -34,6 +35,7 @@ function Navbar() {
               alt="burger menu"
               className="w-[2rem] mr-4"
               onClick={togglePanel}
+              loading="lazy"
             />
           </div>
         </div>
