@@ -56,10 +56,13 @@ function MobileHome() {
               loading="lazy"
             />
           </div>
-          <div className="text-terracotta text-[1.4em] font-bold">
-            <p>please message us on instagram by</p>
-            <p className="bg-terracotta text-linen px-3 w-[7rem] rounded-lg">
-              march 31
+          <div className="text-terracotta text-center text-[1.4em] font-bold">
+            <p>
+              We&apos;d love to know if you can make it so that we can prepare
+              accordingly! Kindly message us on Instagram by{" "}
+              <span className="bg-terracotta text-linen px-3 w-[7rem] rounded-lg">
+                March 31
+              </span>
             </p>
             <div className="mt-[2rem]">
               <a
