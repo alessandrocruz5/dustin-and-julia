@@ -61,8 +61,8 @@ function MobileCeremonyPage() {
           />
         </div>
       </div>
-      <div className="min-h-screen flex flex-col items-center text-terracotta my-10 p-10">
-        <div className="font-bold text-6xl mb-8">Dress Code</div>
+      <div className="min-h-screen flex flex-col items-center justify-center text-terracotta my-10 p-10">
+        <div className="font-bold text-5xl mb-8 text-center">Dress Code</div>
 
         <div className="flex flex-col mb-16">
           <ImageCard
