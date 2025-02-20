@@ -30,7 +30,7 @@ function MobileCouplePage() {
       </div>
       <PageTitle
         image={flowerImage}
-        title="get to know us"
+        title="Get to know us!"
         width={300}
         height={300}
       />
@@ -42,13 +42,13 @@ function MobileCouplePage() {
             className="object-cover aspect-square w-[20rem] h-[20rem] rounded-2xl"
           />
           <div className="text-terracotta font-bold flex flex-col space-y-5">
-            <h2 className="text-3xl mr-auto">our foundation</h2>
+            <h2 className="text-3xl mr-auto">Our foundation</h2>
             <p className="text-xl">
-              because of the Lord&apos;s great love we are not consumed, for His
-              compassions never fail. they are new every morning; great is your
+              Because of the Lord&apos;s great love we are not consumed, for His
+              compassions never fail. They are new every morning; great is your
               faithfulness.
             </p>
-            <h2 className="text-2xl ml-auto">lamentations 3:22-23</h2>
+            <h2 className="text-2xl ml-auto">Lamentations 3:22-23</h2>
           </div>
         </div>
       </section>
@@ -60,23 +60,23 @@ function MobileCouplePage() {
             className="scale-[2] object-cover transform translate-x-[-5.5rem] brightness-[.6]"
           />
           <div className="absolute flex flex-col text-latte font-bold text-center top-[20%] p-10 space-y-5">
-            <div className="text-4xl">a love rooted in faith</div>
+            <div className="text-3xl">A love rooted in faith</div>
             <div className="space-y-3">
               <div>
-                dustin and julia&apos;s love story began serving side by side in
-                youth ministry at church. what started as good friends quickly
+                Dustin and Julia&apos;s love story began serving side by side in
+                youth ministry at church. What started as good friends quickly
                 blossomed into a deep connection rooted in their mutual love for
-                the next generation and the Lord. as they spent time in the same
-                circle of friends, dustin found himself drawn to julia&apos;s
+                the next generation and the Lord. As they spent time in the same
+                circle of friends, Dustin found himself drawn to Julia&apos;s
                 lively energy, a perfect contrast to his quiet and introverted
                 nature.
               </div>
               <div>
-                as they start this new chapter together, dustin and julia are
+                As they start this new chapter together, Dustin and Julia are
                 dedicated to celebrating in a way that honors their families,
                 heritage, and the people who have supported them along the way.
-                their wedding is a reflection of their hearts—intimate,
-                authentic, and joyfully candid. surrounded by loved ones, they
+                Their wedding is a reflection of their hearts—intimate,
+                authentic, and joyfully candid. Surrounded by loved ones, they
                 aim to cherish this moment as a testimony to the love they share
                 and the faith that brought them together.
               </div>
@@ -122,21 +122,21 @@ function MobileCouplePage() {
                            : "opacity-0 z-0"
                        }`}
           >
-            <div className="text-3xl">dustin</div>
+            <div className="text-3xl">Dustin</div>
             <div className="text-lg space-y-5">
               <div>
-                dustin is the kind of person whose quiet demeanor speaks
-                volumes. an introvert at heart, he carries wisdom and passion
+                Dustin is the kind of person whose quiet demeanor speaks
+                volumes. An introvert at heart, he carries wisdom and passion
                 that is evident in every conversation.
               </div>
               <div>
-                as a filmmaker, dustin&apos;s gift for storytelling is seen
+                As a filmmaker, Dustin&apos;s gift for storytelling is seen
                 through his creative lens as he captures stories in a way that
-                inspires and connects people. his artistry reflects not just his
+                inspires and connects people. His artistry reflects not just his
                 skill, but the heart he pours into his work.
               </div>
               <div>
-                dustin&apos;s love for others and devotion to family are at the
+                Dustin&apos;s love for others and devotion to family are at the
                 core of who he is.
               </div>
             </div>
@@ -150,21 +150,21 @@ function MobileCouplePage() {
                            : "opacity-0 z-0"
                        }`}
           >
-            <div className="text-3xl">julia</div>
+            <div className="text-3xl">Julia</div>
             <div className="text-lg space-y-5">
               <div>
-                julia is a passionate and purposeful individual who pours her
-                heart into everything she does. a proud multi-passionate, she
+                Julia is a passionate and purposeful individual who pours her
+                heart into everything she does. A proud multi-passionate, she
                 embraces God&apos;s call through the many roles she fulfills.
               </div>
               <div>
-                her love for local fashion, uplifting communities, and teaching
+                Her love for local fashion, uplifting communities, and teaching
                 kids reflects her values, as she strives to champion creativity
                 and connection wherever she goes.
               </div>
               <div>
-                a true people person, julia&apos;s warmth and energy light up
-                every room. her love for family and building meaningful
+                A true people person, Julia&apos;s warmth and energy light up
+                every room. Her love for family and building meaningful
                 relationships is at the heart of who she is.
               </div>
             </div>
@@ -172,12 +172,12 @@ function MobileCouplePage() {
         </div>
       </section>
       <section className="flex flex-col justify-center items-center h-screen w-screen p-10 text-terracotta text-center font-bold space-y-10">
-        <div className=" text-5xl">what we value</div>
+        <div className=" text-5xl">What we value</div>
         <div>
           <ImageSlider />
         </div>
         <div className="text-xl">
-          we want to be intentional in everything we do in preparation of our
+          We want to be intentional in everything we do in preparation of our
           wedding and marriage that will help us honor God through honoring our
           parents, families, and community.
         </div>

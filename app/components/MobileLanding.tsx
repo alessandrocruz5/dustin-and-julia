@@ -27,9 +27,9 @@ function MobileLanding({ image }: MobileLandingProps) {
                       transform -translate-y-1/2"
       >
         <div className="space-y-1">
-          <div>dustin</div>
+          <div>Dustin</div>
           <div>&</div>
-          <div>julia</div>
+          <div>Julia</div>
         </div>
       </div>
 

@@ -41,12 +41,12 @@ function SidePanel({ isOpen, onClose }: SidePanelProps) {
           <nav className="mt-24 md:mt-32">
             <div className="space-y-2 text-terracotta font-bold text-center">
               {[
-                { href: "/the-couple", label: "the couple" },
-                { href: "/the-ceremony", label: "the ceremony" },
-                { href: "/the-entourage", label: "the entourage" },
+                { href: "/the-couple", label: "The Couple" },
+                { href: "/the-ceremony", label: "The Ceremony" },
+                { href: "/the-entourage", label: "The Entourage" },
                 {
                   href: "https://www.instagram.com/dustinandjulia/?hl=en",
-                  label: "rsvp",
+                  label: "RSVP",
                   external: true,
                 },
               ].map(({ href, label, external }) => (

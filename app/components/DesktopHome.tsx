@@ -47,7 +47,6 @@ function DesktopHome() {
         alt="spin"
         buttonLink="the-entourage"
         buttonTitle="Details"
-        className="my-20"
       >
         <h2>The Entourage</h2>
       </CenterSegment>

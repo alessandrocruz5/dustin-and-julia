@@ -18,35 +18,35 @@ function MobileHome() {
       <Segment
         image={coupleImage}
         buttonStyles="ml-auto"
-        buttonTitle="about us"
+        buttonTitle="Details"
         buttonLink="the-couple"
       >
-        <h2>the</h2>
-        <h2>couple</h2>
+        <h2>The</h2>
+        <h2>Couple</h2>
       </Segment>
       <Segment
         image={ceremonyImage}
         textStyle="text-right"
         buttonStyles="mr-auto"
-        buttonTitle="details"
+        buttonTitle="Details"
         buttonLink="the-ceremony"
       >
-        <h2>the</h2>
-        <h2>ceremony</h2>
+        <h2>The</h2>
+        <h2>Ceremony</h2>
       </Segment>
       <Segment
         image={spinImage}
         buttonStyles="ml-auto"
-        buttonTitle="details"
+        buttonTitle="Details"
         buttonLink="the-entourage"
       >
-        <h2>the</h2>
-        <h2>entourage</h2>
+        <h2>The</h2>
+        <h2>Entourage</h2>
       </Segment>
       <section className="w-full min-h-screen flex flex-col justify-center items-center">
         <div className="w-full max-w-xl p-[2rem] px-8 py-[12rem] space-y-10 mx-auto">
           <div className="text-terracotta space-y-1 text-5xl font-bold text-center">
-            <h2>rsvp</h2>
+            <h2>RSVP</h2>
           </div>
           <div className="relative w-full">
             <Image

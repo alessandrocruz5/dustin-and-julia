@@ -46,17 +46,17 @@ const ImageSlider = () => {
   const slides = [
     {
       image: honorImage,
-      text: "honor",
+      text: "Honor",
       alt: "honor",
     },
     {
       image: intentionalityImage,
-      text: "intentionality",
+      text: "Intentionality",
       alt: "intentionality",
     },
     {
       image: serviceImage,
-      text: "service",
+      text: "Service",
       alt: "service",
     },
   ];

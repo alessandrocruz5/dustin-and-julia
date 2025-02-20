@@ -8,7 +8,6 @@ interface CenterSegmentProps {
   alt: string;
   buttonTitle: string;
   buttonLink: string;
-  className?: string;
 }
 
 function CenterSegment({
@@ -17,7 +16,6 @@ function CenterSegment({
   alt,
   buttonTitle,
   buttonLink,
-  className = "",
 }: CenterSegmentProps) {
   return (
     <section className="w-full min-h-screen flex items-center justify-center my-20">

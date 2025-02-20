@@ -18,7 +18,6 @@ function DesktopCouplePage() {
   const [juliaProfile, setJuliaProfile] = useState(false);
   const [honorVisible, setHonorVisible] = useState(false);
   const [intentionalityVisible, setIntentionalityVisible] = useState(false);
-  const [serviceVisible, setServiceVisible] = useState(false);
 
   return (
     <>
@@ -70,23 +69,22 @@ function DesktopCouplePage() {
               </h2>
               <div className="text-center font-bold text-xl space-y-10">
                 <p>
-                  Dustin and Julia have been forging strong ties for life in
-                  youth ministry at church. Their attraction evolved beyond
-                  their shared interests and into deep connection rooted in
-                  their mutual love for the Lord. Together, they have weathered
-                  every storm through the gentle rocks of friends, family bonds,
-                  and commitments to the key values that continue to tie their
-                  hearts and intertwind spirits.
+                  Dustin and Julia&apos;s love story began serving side by side
+                  in youth ministry at church. What started as good friends
+                  quickly blossomed into a deep connection rooted in their
+                  mutual love for the next generation and the Lord. As they
+                  spent time in the same circle of friends, Dustin found himself
+                  drawn to Julia&apos;s lively energy, a perfect contrast to his
+                  quiet and introverted nature.
                 </p>
                 <p>
-                  As they prepare for their impending nuptials, Dustin and Julia
-                  are dedicated to celebrating in a way that honors their
-                  families, heritage, and the Creator who orchestrated their
-                  relationship. Their wedding is a reflection of their
-                  hearts—intricately woven with personalized details, surrounded
-                  by loved ones, the vibe to elevate guests&apos; connection
-                  with one another, fun food, great music and the faith that
-                  brought them together.
+                  As they start this new chapter together, Dustin and Julia are
+                  dedicated to celebrating in a way that honors their families,
+                  heritage, and the people who have supported them along the
+                  way. Their wedding is a reflection of their hearts—intimate,
+                  authentic, and joyfully candid. Surrounded by loved ones, they
+                  aim to cherish this moment as a testimony to the love they
+                  share and the faith that brought them together.
                 </p>
               </div>
             </div>
@@ -203,7 +201,7 @@ function DesktopCouplePage() {
       <section className="w-full min-h-screen flex items-center justify-center my-20 p-4 md:p-10">
         <div className="w-full max-w-6xl flex flex-col items-center justify-between gap-8 md:gap-12 font-bold">
           <div className="text-terracotta text-4xl md:text-5xl">
-            What we value!
+            What we value
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 w-full">

@@ -3,11 +3,17 @@
 import { useState, useEffect } from "react";
 import { useViewport } from "@/app/hooks/useViewport";
 
+interface ResponsiveLayoutProps {
+  mobileContent: React.ReactNode;
+  desktopContent: React.ReactNode;
+  breakpoint?: number;
+}
+
 const ResponsiveLayout = ({
   mobileContent,
   desktopContent,
   breakpoint = 1024,
-}) => {
+}: ResponsiveLayoutProps) => {
   const { width } = useViewport();
   const [mounted, setMounted] = useState(false);
 
