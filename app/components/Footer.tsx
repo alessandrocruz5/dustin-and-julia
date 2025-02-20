@@ -22,9 +22,9 @@ function Footer() {
           {/* Content container - properly centered */}
           <div className="absolute top-[4rem] left-1/2 -translate-x-1/2 w-full max-w-md mx-auto px-4 text-center space-y-8">
             <div className="text-terracotta font-bold italic text-5xl sm:text-6xl space-y-1 lg:flex lg:gap-4 lg:justify-center lg:text-9xl">
-              <div>dustin</div>
+              <div>Dustin</div>
               <div>&</div>
-              <div>julia</div>
+              <div>Julia</div>
             </div>
 
             <div className="space-x-4 text-terracotta font-bold text-lg sm:text-xl lg:text-3xl lg:flex">

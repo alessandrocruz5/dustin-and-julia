@@ -16,7 +16,7 @@ function DesktopLanding() {
         />
         <div className="absolute bottom-[5rem] space-y-10 flex flex-col justify-center items-center w-full">
           <div className="text-linen text-8xl font-bold text-center">
-            dustin & julia
+            Dustin & Julia
           </div>
           <div className="text-linen text-5xl font-bold text-center">
             5.5.2025

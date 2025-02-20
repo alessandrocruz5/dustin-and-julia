@@ -47,7 +47,7 @@ function BackstorySection({ image }: BackstorySectionProps) {
             />
             <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
               <p className="text-white font-bold text-xl">
-                tap on either of us to know us!
+                Tap here to get to know us!
               </p>
             </div>
           </div>
