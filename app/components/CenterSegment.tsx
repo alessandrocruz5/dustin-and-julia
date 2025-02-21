@@ -21,7 +21,7 @@ function CenterSegment({
     <section className="w-full min-h-screen flex items-center justify-center my-20">
       <div className="container mx-auto px-4 flex flex-col space-y-12">
         <div className="flex justify-center items-center">
-          <div className="w-full max-w-4xl">
+          <div className="w-full max-w-6xl">
             <Image
               src={image}
               alt={alt}
@@ -30,7 +30,7 @@ function CenterSegment({
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between max-w-4xl mx-auto w-full gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between max-w-4xl lg:max-w-6xl mx-auto w-full gap-8">
           <div className="text-terracotta text-7xl font-bold">{children}</div>
           <div>
             <Button title={buttonTitle} href={buttonLink} />

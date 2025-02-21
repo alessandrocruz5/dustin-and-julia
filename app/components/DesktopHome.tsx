@@ -32,16 +32,6 @@ function DesktopHome() {
       >
         <h2>The Ceremony</h2>
       </Segment>
-      {/* <Segment
-        image={spinImage}
-        buttonStyles="ml-auto mt-[10rem]"
-        buttonTitle="details"
-        buttonLink="the-entourage"
-        imagePosition="left"
-        contentAlignment="right"
-      >
-        <h2>the entourage</h2>
-      </Segment> */}
       <CenterSegment
         image={spinImage}
         alt="spin"
