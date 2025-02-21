@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 
 import honorImage from "@/public/assets/photos/JUDU ENGAGEMENT-74.jpg";
@@ -63,79 +63,38 @@ const ImageSlider = () => {
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
-  const dragInfo = useRef({ startX: 0, scrollLeft: 0, lastX: 0, velocity: 0 });
-  const animationFrame = useRef<number>(null);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const startDragging = useCallback(
-    (e: React.MouseEvent | React.TouchEvent) => {
-      if (!sliderRef.current) return;
-      setIsDragging(true);
-
-      const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
-      dragInfo.current = {
-        startX: clientX,
-        scrollLeft: sliderRef.current.scrollLeft,
-        lastX: clientX,
-        velocity: 0,
-      };
-    },
-    []
-  );
-
-  const stopDragging = useCallback(() => {
-    setIsDragging(false);
-
-    if (Math.abs(dragInfo.current.velocity) > 0.5) {
-      const startTime = performance.now();
-      const startScroll = sliderRef.current?.scrollLeft ?? 0;
-      const direction = dragInfo.current.velocity;
-
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / 500, 1); // 500ms duration
-        const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
-
-        if (sliderRef.current) {
-          const momentum = direction * 400 * easeOut; // Apply easing to momentum
-          sliderRef.current.scrollLeft =
-            startScroll + momentum * (1 - progress); // Scale with progress
-
-          if (progress < 1) {
-            animationFrame.current = requestAnimationFrame(animate);
-          }
-        }
-      };
-
-      if (animationFrame.current) {
-        cancelAnimationFrame(animationFrame.current);
-      }
-      animationFrame.current = requestAnimationFrame(animate);
+  const startDragging = (
+    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
+  ) => {
+    setIsDragging(true);
+    if ("touches" in e) {
+      setStartX(e.touches[0].pageX - sliderRef.current!.offsetLeft);
+    } else {
+      setStartX(e.pageX - sliderRef.current!.offsetLeft);
     }
-  }, []);
+    setScrollLeft(sliderRef.current!.scrollLeft);
+  };
 
-  const move = useCallback(
-    (e: React.MouseEvent | React.TouchEvent) => {
-      if (!isDragging || !sliderRef.current) return;
-      e.preventDefault();
+  const stopDragging = () => {
+    setIsDragging(false);
+  };
 
-      const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
-      const dx = clientX - dragInfo.current.lastX;
-      dragInfo.current.velocity = dx * 0.01; // Scale down the velocity
-      dragInfo.current.lastX = clientX;
+  const move = (
+    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
+  ) => {
+    if (!isDragging) return;
 
-      const x = clientX - dragInfo.current.startX;
-      sliderRef.current.scrollLeft = dragInfo.current.scrollLeft - x;
-    },
-    [isDragging]
-  );
-
-  React.useEffect(() => {
-    return () => {
-      if (animationFrame.current) {
-        cancelAnimationFrame(animationFrame.current);
-      }
-    };
-  }, []);
+    e.preventDefault();
+    const x =
+      "touches" in e
+        ? e.touches[0].pageX - sliderRef.current!.offsetLeft
+        : e.pageX - sliderRef.current!.offsetLeft;
+    const walk = (x - startX) * 2;
+    sliderRef.current!.scrollLeft = scrollLeft - walk;
+  };
 
   return (
     <section className="relative w-screen max-w-full overflow-hidden">
@@ -149,12 +108,7 @@ const ImageSlider = () => {
         onTouchStart={startDragging}
         onTouchEnd={stopDragging}
         onTouchMove={move}
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-          scrollSnapType: "x mandatory",
-          WebkitOverflowScrolling: "touch",
-        }}
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {slides.map((slide, index) => (
           <ImageSlide
