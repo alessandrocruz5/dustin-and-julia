@@ -171,7 +171,9 @@ function MobileCouplePage() {
       </section>
       <section className="flex flex-col justify-center items-center h-screen w-screen p-10 text-terracotta text-center font-bold space-y-10">
         <div className=" text-5xl">What we value</div>
+
         <div>
+          <div>Tap to find out!</div>
           <ImageSlider />
         </div>
         <div className="text-xl">

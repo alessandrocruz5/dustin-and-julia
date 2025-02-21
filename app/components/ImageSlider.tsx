@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 
 import honorImage from "@/public/assets/photos/JUDU ENGAGEMENT-74.jpg";
 import intentionalityImage from "@/public/assets/photos/JUDU ENGAGEMENT-88.jpg";
 import serviceImage from "@/public/assets/photos/JUDU ENGAGEMENT-76.jpg";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface SlideProps {
   image: StaticImageData;
@@ -36,7 +37,7 @@ const ImageSlide: React.FC<SlideProps> = ({ image, text, alt }) => {
                    transition-opacity duration-300 text-white font-bold italic
                    ${isTextVisible ? "opacity-100" : "opacity-0"}`}
       >
-        <p className="text-5xl">{text}</p>
+        <p className="text-3xl">{text}</p>
       </div>
     </div>
   );
@@ -61,63 +62,94 @@ const ImageSlider = () => {
     },
   ];
 
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const startDragging = (
-    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
-  ) => {
-    setIsDragging(true);
-    if ("touches" in e) {
-      setStartX(e.touches[0].pageX - sliderRef.current!.offsetLeft);
-    } else {
-      setStartX(e.pageX - sliderRef.current!.offsetLeft);
-    }
-    setScrollLeft(sliderRef.current!.scrollLeft);
-  };
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
+  }, [slides.length]);
 
-  const stopDragging = () => {
-    setIsDragging(false);
-  };
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  }, [slides.length]);
 
-  const move = (
-    e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
-  ) => {
-    if (!isDragging) return;
+  useEffect(() => {
+    const handleKeydown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") prevSlide();
+      if (e.key === "ArrowRight") nextSlide();
+    };
 
-    e.preventDefault();
-    const x =
-      "touches" in e
-        ? e.touches[0].pageX - sliderRef.current!.offsetLeft
-        : e.pageX - sliderRef.current!.offsetLeft;
-    const walk = (x - startX) * 2;
-    sliderRef.current!.scrollLeft = scrollLeft - walk;
+    window.addEventListener("keydown", handleKeydown);
+    return () => window.removeEventListener("keydown", handleKeydown);
+  }, [nextSlide, prevSlide]);
+
+  // Calculate the translation for the slider
+  const getSlideTranslation = () => {
+    const slideWidth = 320; // w-80 = 20rem = 320px
+    const gap = 16; // gap-4 = 1rem = 16px
+    return -(currentIndex * (slideWidth + gap));
   };
 
   return (
     <section className="relative w-screen max-w-full overflow-hidden">
-      <div
-        ref={sliderRef}
-        className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar px-4 py-8"
-        onMouseDown={startDragging}
-        onMouseUp={stopDragging}
-        onMouseLeave={stopDragging}
-        onMouseMove={move}
-        onTouchStart={startDragging}
-        onTouchEnd={stopDragging}
-        onTouchMove={move}
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        {slides.map((slide, index) => (
-          <ImageSlide
-            key={index}
-            image={slide.image}
-            text={slide.text}
-            alt={slide.alt}
-          />
-        ))}
+      <div className="relative flex justify-center items-center px-4 py-8">
+        {/* Arrow buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-8 z-10 p-2 rounded-full bg-white/30 backdrop-blur-sm 
+                   hover:bg-white/40 transition-colors duration-200"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
+
+        <button
+          onClick={nextSlide}
+          className="absolute right-8 z-10 p-2 rounded-full bg-white/30 backdrop-blur-sm 
+                   hover:bg-white/40 transition-colors duration-200"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
+
+        {/* Slides container with transition */}
+        <div className="overflow-hidden">
+          <div
+            className="flex gap-4 transition-transform duration-300 ease-in-out"
+            style={{
+              transform: `translateX(${getSlideTranslation()}px)`,
+            }}
+          >
+            {slides.map((slide, index) => (
+              <ImageSlide
+                key={index}
+                image={slide.image}
+                text={slide.text}
+                alt={slide.alt}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-4 left-0 right-0 flex gap-2 justify-center">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 
+                        ${
+                          currentIndex === index
+                            ? "bg-white w-4"
+                            : "bg-white/50"
+                        }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
