@@ -64,7 +64,7 @@ const ImageSlider = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const dragInfo = useRef({ startX: 0, scrollLeft: 0, lastX: 0, velocity: 0 });
-  const animationFrame = useRef<number>();
+  const animationFrame = useRef<number>(null);
 
   const startDragging = useCallback(
     (e: React.MouseEvent | React.TouchEvent) => {
@@ -96,8 +96,9 @@ const ImageSlider = () => {
         const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
 
         if (sliderRef.current) {
-          const momentum = direction * 400 * (1 - progress); // Gradually reduce velocity
-          sliderRef.current.scrollLeft = startScroll + momentum;
+          const momentum = direction * 400 * easeOut; // Apply easing to momentum
+          sliderRef.current.scrollLeft =
+            startScroll + momentum * (1 - progress); // Scale with progress
 
           if (progress < 1) {
             animationFrame.current = requestAnimationFrame(animate);
