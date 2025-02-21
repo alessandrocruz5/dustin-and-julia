@@ -57,9 +57,9 @@ function MobileCouplePage() {
             alt="faith"
             className="scale-[2] object-cover transform translate-x-[-5.5rem] brightness-[.6]"
           />
-          <div className="absolute flex flex-col text-latte font-bold text-center top-[20%] p-10 space-y-5">
+          <div className="absolute flex flex-col text-latte font-bold text-center top-[4%] p-10 space-y-5">
             <div className="text-3xl">A love rooted in faith</div>
-            <div className="space-y-3">
+            <div className="text-md space-y-3">
               <div>
                 Dustin and Julia&apos;s love story began serving side by side in
                 youth ministry at church. What started as good friends quickly

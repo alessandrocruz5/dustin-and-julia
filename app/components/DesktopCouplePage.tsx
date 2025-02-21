@@ -30,22 +30,24 @@ function DesktopCouplePage() {
         height={400}
       />
       <section className="w-full min-h-screen flex items-center justify-center my-20 p-10">
-        <div className="w-full max-w-6xl flex items-center justify-between gap-8">
+        <div className="w-full max-w-6xl xl:max-w-8xl flex items-center justify-between gap-8">
           <div className="w-1/2 max-w-md">
             <Image
               src={foundationImage}
               alt="foundation"
-              className="object-cover aspect-square w-[25rem] h-[25rem] rounded-2xl"
+              className="object-cover aspect-square w-[25rem] h-[25rem] rounded-2xl xl:w-[30rem] xl:h-[30rem] xl:rounded-3xl"
             />
           </div>
-          <div className="w-1/2 flex flex-col justify-between text-terracotta space-y-[5rem] font-bold">
-            <h2 className="text-3xl">Our Foundation</h2>
-            <p className="text-2xl italic">
+          <div className="w-1/2 flex flex-col justify-between text-terracotta space-y-[8rem] font-bold">
+            <h2 className="text-3xl xl:text-4xl">Our Foundation</h2>
+            <p className="text-2xl xl:text-3xl italic">
               Because of the Lord&apos;s great love we are not consumed, for His
               compassions never fail. They are new every morning; great is your
               faithfulness.
             </p>
-            <h2 className="text-3xl text-right">Lamentations 3:22-23</h2>
+            <h2 className="text-3xl xl:text-4xl text-right">
+              Lamentations 3:22-23
+            </h2>
           </div>
         </div>
       </section>
@@ -65,11 +67,11 @@ function DesktopCouplePage() {
 
           {/* Center content - with proper padding */}
           <div className="bg-latte h-screen flex items-center justify-center">
-            <div className="max-w-xl px-8 py-12 text-terracotta">
-              <h2 className="text-4xl mb-8 font-bold text-center">
+            <div className="max-w-xl xl:max-w-4xl px-8 py-12 text-terracotta">
+              <h2 className="text-4xl xl:text-7xl mb-8 xl:mb-14 font-bold text-center">
                 A love rooted in faith
               </h2>
-              <div className="text-center font-bold text-xl space-y-10">
+              <div className="text-center font-bold text-xl xl:text-3xl space-y-10 xl:space-y-20">
                 <p>
                   Dustin and Julia&apos;s love story began serving side by side
                   in youth ministry at church. What started as good friends
@@ -107,7 +109,7 @@ function DesktopCouplePage() {
       </section>
 
       <section className="w-full min-h-screen flex items-center justify-center my-20 p-4 md:p-10">
-        <div className="w-full max-w-6xl grid grid-cols-[2fr,2fr,2fr] items-center gap-8 font-bold relative">
+        <div className="w-full max-w-6xl xl:max-w-7xl grid grid-cols-[2fr,2fr,2fr] items-center gap-8 font-bold relative">
           {/* Dustin's Profile */}
           <div
             className={`text-terracotta space-y-4 font-bold flex flex-col justify-center text-left
@@ -120,8 +122,10 @@ function DesktopCouplePage() {
                     order-2 md:order-1
                   `}
           >
-            <div className="text-3xl md:text-4xl">Dustin</div>
-            <div className="text-lg md:text-xl space-y-6 md:space-y-10">
+            <div className="text-3xl md:text-4xl xl:text-5xl xl:mb-4">
+              Dustin
+            </div>
+            <div className="text-lg md:text-xl xl:text-[1.6em] space-y-6 md:space-y-10">
               <p>
                 Dustin is the kind of person whose quiet demeanor speaks
                 volumes. An introvert at heart, he carries wisdom and passion
@@ -145,10 +149,10 @@ function DesktopCouplePage() {
             <Image
               src={backstoryImage}
               alt="Dustin and Julia"
-              className="rounded-t-[12rem] w-full max-w-xs md:max-w-none"
+              className="rounded-t-[12rem] w-full max-w-xs xl:max-w-xl"
             />
             <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
-              <p className="text-white font-bold text-xl drop-shadow-lg">
+              <p className="text-white font-bold text-xl xl:text-2xl drop-shadow-lg">
                 Tap here to get to know us!
               </p>
             </div>
@@ -178,8 +182,10 @@ function DesktopCouplePage() {
                     order-3
                   `}
           >
-            <div className="text-3xl md:text-4xl">Julia</div>
-            <div className="text-lg space-y-10">
+            <div className="text-3xl md:text-4xl xl:text-5xl xl:mb-4">
+              Julia
+            </div>
+            <div className="text-lg xl:text-[1.6em] space-y-6 md:space-y-10">
               <p>
                 Julia is a passionate and purposeful individual who pours her
                 heart into everything she does. A proud multi-passionate, she
@@ -202,7 +208,7 @@ function DesktopCouplePage() {
 
       <section className="w-full min-h-screen flex items-center justify-center my-20 p-4 md:p-10">
         <div className="w-full max-w-6xl flex flex-col items-center justify-between gap-8 md:gap-12 font-bold">
-          <div className="text-terracotta text-4xl md:text-5xl">
+          <div className="text-terracotta text-4xl xl:text-6xl">
             What we value
           </div>
 
@@ -262,7 +268,7 @@ function DesktopCouplePage() {
             </div>
           </div>
 
-          <div className="text-terracotta text-center text-xl md:text-2xl max-w-4xl">
+          <div className="text-terracotta text-center text-xl xl:text-3xl max-w-4xl">
             We want to be intentional in everything we do in preparation of our
             wedding and marriage that will help us honor God through honoring
             our parents, families, and community.
