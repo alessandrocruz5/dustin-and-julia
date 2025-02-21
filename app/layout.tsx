@@ -5,14 +5,14 @@ import "./globals.css";
 const SITE_URL = "https://dustin-&-julia.vercel.app";
 
 export const metadata: Metadata = {
-  title: "dustin & julia",
+  title: "Dustin & Julia",
   description: "Join us to celebrate our special day on May 5, 2025",
   metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: "dustin & julia",
+    title: "Dustin & Julia",
     description: "Join us to celebrate our special day on May 5, 2025",
     url: "https://yourweddingdomain.com",
-    siteName: "dustin & julia",
+    siteName: "Dustin & Julia",
     images: [
       {
         url: "/JUDU ENGAGEMENT-63.jpg",
