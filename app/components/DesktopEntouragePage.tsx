@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import EntourageCard from "./EntourageCard";
+import PrincipalSponsorCard from "./PrincipalSponsorCard";
 import Image from "next/image";
 
 import coconutImage from "@/public/assets/graphics/Coconutburnt.png";
 import flowerImage from "@/public/assets/graphics/Gumamelaburnt.png";
 import treeImage from "@/public/assets/graphics/Palm treeburnt.png";
 import cactusImage from "@/public/assets/graphics/Cactusburnt.png";
-import EntourageCard from "../components/EntourageCard";
 import crossSm from "@/public/assets/graphics/cross-sm.png";
-import Footer from "../components/Footer";
-import PrincipalSponsorCard from "./PrincipalSponsorCard";
 
-function MobileEntouragePage() {
+function DesktopEntouragePage() {
   return (
     <>
       <style jsx global>{`
@@ -49,7 +49,7 @@ function MobileEntouragePage() {
       `}</style>
 
       <Navbar />
-      <div className="h-screen flex justify-center items-center text-terracotta text-5xl sm:text-6xl md:text-7xl font-bold">
+      <div className="h-screen flex justify-center items-center text-terracotta text-7xl font-bold">
         Entourage
       </div>
 
@@ -57,44 +57,76 @@ function MobileEntouragePage() {
         {/* Decorative elements container - using percentages for positioning */}
         <div className="fixed inset-0 w-full -z-10 overflow-hidden">
           {/* Left side decorations - using percentages and viewport units */}
-          <div className="absolute top-[10vh] left-[2vw] sm:left-[5vw] md:left-[8vw]">
+          <div className="absolute top-[15vh] left-[1vw]">
             <Image
               src={cactusImage}
               alt="cactus graphic"
-              className="flip-animation w-[11rem] sm:w-[160px] md:w-[200px] h-auto"
+              className="flip-animation w-[11rem] h-auto"
               loading="lazy"
             />
           </div>
-          <div className="absolute bottom-[25vh] left-[3vw] sm:left-[5vw] md:left-[7vw]">
+          <div className="absolute bottom-[25vh] left-[1vw]">
             <Image
               src={flowerImage}
               alt="flower graphic"
-              className="flip-animation w-[11rem] sm:w-[160px] md:w-[200px] h-auto"
+              className="flip-animation w-[11rem] h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="absolute top-[35vh] left-[10vw]">
+            <Image
+              src={coconutImage}
+              alt="coconut graphic"
+              className="flip-animation w-[11rem] h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="absolute bottom-[6vh] left-[10vw]">
+            <Image
+              src={treeImage}
+              alt="palm tree graphic"
+              className="flip-animation w-[11rem] h-auto"
               loading="lazy"
             />
           </div>
 
           {/* Right side decorations - using percentages and viewport units */}
-          <div className="absolute top-[20vh] right-[2vw] sm:right-[5vw] md:right-[8vw]">
+          <div className="absolute top-[15vh] right-[1vw]">
             <Image
-              src={coconutImage}
-              alt="coconut graphic"
-              className="flip-animation w-[11rem] sm:w-[160px] md:w-[200px] h-auto"
+              src={cactusImage}
+              alt="cactus graphic"
+              className="flip-animation w-[11rem] h-auto"
               loading="lazy"
             />
           </div>
-          <div className="absolute bottom-[12vh] right-[3vw] sm:right-[5vw] md:right-[7vw]">
+          <div className="absolute bottom-[25vh] right-[1vw]">
+            <Image
+              src={flowerImage}
+              alt="flower graphic"
+              className="flip-animation w-[11rem] h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="absolute top-[35vh] right-[10vw]">
+            <Image
+              src={coconutImage}
+              alt="coconut graphic"
+              className="flip-animation w-[11rem] h-auto"
+              loading="lazy"
+            />
+          </div>
+          <div className="absolute bottom-[6vh] right-[10vw]">
             <Image
               src={treeImage}
               alt="palm tree graphic"
-              className="flip-animation w-[11rem] sm:w-[160px] md:w-[200px] h-auto"
+              className="flip-animation w-[11rem] h-auto"
               loading="lazy"
             />
           </div>
         </div>
 
         {/* Entourage Cards Container */}
-        <div className="relative z-10 max-w-lg mx-auto px-4">
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
           <EntourageCard title="Parents of the Groom">
             <div>Jerry Dennis L. Dagamac</div>
             <div>Ma. Luisa B. Dagamac</div>
@@ -110,7 +142,7 @@ function MobileEntouragePage() {
           </EntourageCard>
 
           <EntourageCard title="Principal Sponsors">
-            <div className="flex flex-col space-y-4 text-center w-full">
+            <div className="flex flex-col space-y-10 text-center w-full">
               <PrincipalSponsorCard>
                 <div>Michael A. Paderes</div>
                 <div>Pia A. Paderes</div>
@@ -219,10 +251,9 @@ function MobileEntouragePage() {
           </EntourageCard>
         </div>
       </div>
-
       <Footer />
     </>
   );
 }
 
-export default MobileEntouragePage;
+export default DesktopEntouragePage;

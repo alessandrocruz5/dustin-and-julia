@@ -12,6 +12,7 @@ import backstoryImage from "@/public/assets/photos/JUDU ENGAGEMENT-05.jpg";
 import honorImage from "@/public/assets/photos/JUDU ENGAGEMENT-74.jpg";
 import intentionalityImage from "@/public/assets/photos/JUDU ENGAGEMENT-88.jpg";
 import serviceImage from "@/public/assets/photos/JUDU ENGAGEMENT-76.jpg";
+import Navbar from "./Navbar";
 
 function DesktopCouplePage() {
   const [dustinProfile, setDustinProfile] = useState(false);
@@ -21,6 +22,7 @@ function DesktopCouplePage() {
 
   return (
     <>
+      <Navbar />
       <PageTitle
         image={flowerImage}
         title="Get to know us!"

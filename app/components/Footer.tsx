@@ -27,7 +27,7 @@ function Footer() {
               <div>Julia</div>
             </div>
 
-            <div className="space-x-4 text-terracotta font-bold text-lg sm:text-xl lg:text-3xl lg:flex">
+            <div className="space-x-4 text-terracotta font-bold text-lg sm:text-xl lg:text-3xl lg:flex lg:justify-between lg:items-center">
               <Link
                 href="https://www.instagram.com/dustindagamac/?hl=en"
                 target="_blank"

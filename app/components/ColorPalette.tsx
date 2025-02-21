@@ -21,7 +21,9 @@ function Circle({ color }: CircleProps) {
   };
 
   return (
-    <div className={`w-[3rem] h-[3rem] rounded-full ${colorClasses[color]}`} />
+    <div
+      className={`w-[3rem] h-[3rem] lg:w-[4rem] lg:h-[4rem] rounded-full ${colorClasses[color]}`}
+    />
   );
 }
 
@@ -36,7 +38,7 @@ function ColorPalette() {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <div className="grid grid-cols-3 gap-8 lg:grid-cols-6">
       {colors.map((color) => (
         <Circle key={color} color={color} />
       ))}

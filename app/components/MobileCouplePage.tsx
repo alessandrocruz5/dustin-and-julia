@@ -25,9 +25,7 @@ function MobileCouplePage() {
 
   return (
     <>
-      <div className="fixed top-0 z-50 w-full">
-        <Navbar />
-      </div>
+      <Navbar />
       <PageTitle
         image={flowerImage}
         title="Get to know us!"

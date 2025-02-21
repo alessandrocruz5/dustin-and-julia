@@ -34,12 +34,12 @@ function SidePanel({ isOpen, onClose }: SidePanelProps) {
             onClick={onClose}
             className="absolute right-4 top-4 hover:bg-linen rounded-full transition-colors"
           >
-            <X className="w-[2rem] h-[2rem] md:h-8 md:w-8 text-terracotta" />
+            <X className="w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem] text-terracotta" />
           </button>
 
           {/* Navigation Links */}
           <nav className="mt-24 md:mt-32">
-            <div className="space-y-2 text-terracotta font-bold text-center">
+            <div className="space-y-8 lg:space-y-12 text-terracotta font-bold text-center lg:text-left">
               {[
                 { href: "/the-couple", label: "The Couple" },
                 { href: "/the-ceremony", label: "The Ceremony" },

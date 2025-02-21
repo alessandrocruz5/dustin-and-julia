@@ -6,19 +6,33 @@ interface PageTitleProps {
   title: string;
   width: number;
   height?: number;
+  imageStyle?: string;
+  titleStyle?: string;
 }
 
-function PageTitle({ image, title, width, height }: PageTitleProps) {
+function PageTitle({
+  image,
+  title,
+  width,
+  height,
+  imageStyle,
+  titleStyle,
+}: PageTitleProps) {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <Image
         src={image}
-        alt="flower"
+        alt="title image"
         width={width}
         height={height}
         loading="lazy"
+        className={`${imageStyle}`}
       />
-      <p className="text-terracotta text-5xl font-bold">{title}</p>
+      <p
+        className={`text-terracotta text-5xl lg:text-6xl font-bold ${titleStyle}`}
+      >
+        {title}
+      </p>
     </div>
   );
 }
