@@ -135,7 +135,7 @@ function MobileEntouragePage() {
                 <div>Samantha C. Que</div>
               </PrincipalSponsorCard>
               <PrincipalSponsorCard>
-                <div>Gerry C. Mulligan</div>
+                <div>Gerard C. Mulligan</div>
                 <div>Desiree D. Mulligan</div>
               </PrincipalSponsorCard>
               <PrincipalSponsorCard>
@@ -167,7 +167,7 @@ function MobileEntouragePage() {
           </EntourageCard>
 
           <EntourageCard title="Matrons of Honor">
-            <div>Andreana Morados-Bautista</div>
+            <div>Ma. Samantha Andreana M. Bautista</div>
             <div>Samantha Grace B. Tagala</div>
           </EntourageCard>
 
