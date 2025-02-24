@@ -34,7 +34,7 @@ function SidePanel({ isOpen, onClose }: SidePanelProps) {
             onClick={onClose}
             className="absolute right-4 top-4 hover:bg-linen rounded-full transition-colors"
           >
-            <X className="w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem] text-terracotta" />
+            <X className="w-[2rem] lg:w-[2.5rem] h-[2rem] lg:h-[2.5rem] text-terracotta" />
           </button>
 
           {/* Navigation Links */}

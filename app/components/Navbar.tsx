@@ -18,14 +18,14 @@ function Navbar() {
   return (
     <>
       <div className="fixed top-0 z-[999] w-full">
-        <nav className="fixed w-screen h-[4rem] lg:h-[5rem] bg-latte z-[998]">
+        <nav className="fixed w-screen h-[4rem] lg:h-[3.5rem] bg-latte z-[998]">
           <div className="flex justify-between lg:justify-end items-center h-full">
             <div className="flex justify-center items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2">
               <Link href="/">
                 <Image
                   src={logoImage}
                   alt="dustin & julia"
-                  className="w-[1.7rem] flex justify-center ml-4 lg:w-[2.2rem] lg:ml-10"
+                  className="w-[1.7rem] flex justify-center ml-4 lg:w-[2rem] lg:ml-10"
                   loading="lazy"
                 />
               </Link>
@@ -34,7 +34,7 @@ function Navbar() {
               <Image
                 src={burgerMenu}
                 alt="burger menu"
-                className="w-[2rem] mr-4 lg:w-[3rem] lg:mr-10"
+                className="w-[2rem] mr-4 lg:w-[2.5rem] lg:mr-10"
                 onClick={togglePanel}
                 loading="lazy"
               />

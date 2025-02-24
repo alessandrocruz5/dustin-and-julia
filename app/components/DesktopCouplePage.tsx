@@ -68,10 +68,10 @@ function DesktopCouplePage() {
           {/* Center content - with proper padding */}
           <div className="bg-latte h-screen flex items-center justify-center">
             <div className="max-w-xl xl:max-w-4xl px-8 py-12 text-terracotta">
-              <h2 className="text-4xl xl:text-7xl mb-8 xl:mb-14 font-bold text-center">
+              <h2 className="text-4xl xl:text-5xl mb-8 xl:mb-14 font-bold text-center">
                 A love rooted in faith
               </h2>
-              <div className="text-center font-bold text-xl xl:text-3xl space-y-10 xl:space-y-20">
+              <div className="text-center font-bold text-xl xl:text-2xl space-y-10 xl:space-y-10">
                 <p>
                   Dustin and Julia&apos;s love story began serving side by side
                   in youth ministry at church. What started as good friends
