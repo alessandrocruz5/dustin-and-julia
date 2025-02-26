@@ -6,10 +6,12 @@ import Footer from "@/app/components/Footer";
 import MobileHome from "./components/MobileHome";
 import DesktopHome from "./components/DesktopHome";
 import ResponsiveLayout from "./components/ResponsiveLayout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function LandingPage() {
   return (
     <div className="min-h-screen bg-linen min-w-screen">
+      <ScrollToTop />
       <Navbar />
       <ResponsiveLayout
         mobileContent={<MobileHome />}
