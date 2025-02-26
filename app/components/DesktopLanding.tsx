@@ -13,7 +13,7 @@ function DesktopLanding() {
           alt="spin"
           fill
           className="object-cover brightness-75 scale-[1.2] transform-gpu"
-          priority
+          loading="lazy"
         />
         <div className="absolute bottom-[5rem] space-y-10 flex flex-col justify-center items-center w-full">
           <RevealOnScroll delay={0.4}>

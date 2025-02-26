@@ -11,7 +11,7 @@ function EntourageCard({ title, children }: EntourageCardProps) {
       <div className="text-4xl lg:text-6xl">{title}</div>
       <div className="w-screen">
         {/* Remove the flex and justify-between from here */}
-        <div className="text-3xl">{children}</div>
+        <div className="text-xl lg:text-3xl">{children}</div>
       </div>
     </div>
   );

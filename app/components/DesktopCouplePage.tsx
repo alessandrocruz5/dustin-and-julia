@@ -41,6 +41,7 @@ function DesktopCouplePage() {
                 src={foundationImage}
                 alt="foundation"
                 className="object-cover aspect-square w-[25rem] h-[25rem] rounded-2xl xl:w-[30rem] xl:h-[30rem] xl:rounded-3xl"
+                loading="lazy"
               />
             </div>
             <div className="w-1/2 flex flex-col justify-between text-terracotta space-y-[8rem] font-bold">
@@ -69,6 +70,7 @@ function DesktopCouplePage() {
                   alt="left image"
                   className="w-full h-full object-cover"
                   layout="fill"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -108,6 +110,7 @@ function DesktopCouplePage() {
                   alt="right image"
                   className="w-full h-full object-cover"
                   layout="fill"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -157,6 +160,7 @@ function DesktopCouplePage() {
                 src={backstoryImage}
                 alt="Dustin and Julia"
                 className="rounded-t-[12rem] w-full max-w-xs xl:max-w-xl"
+                loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
                 <p className="text-white font-bold text-xl xl:text-2xl drop-shadow-lg">
@@ -229,6 +233,7 @@ function DesktopCouplePage() {
                   src={honorImage}
                   alt="honor"
                   className="aspect-square object-cover rounded-2xl transition-all duration-300 hover:brightness-75"
+                  loading="lazy"
                 />
                 <div
                   className="absolute inset-0 flex items-center justify-center p-4 text-center
@@ -247,6 +252,7 @@ function DesktopCouplePage() {
                   src={intentionalityImage}
                   alt="intentionality"
                   className="aspect-square object-cover rounded-2xl transition-all duration-300 hover:brightness-75"
+                  loading="lazy"
                 />
                 <div
                   className="absolute inset-0 flex items-center justify-center p-4 text-center
@@ -262,6 +268,7 @@ function DesktopCouplePage() {
                   src={serviceImage}
                   alt="service"
                   className="aspect-square object-cover rounded-2xl transition-all duration-300 hover:brightness-75"
+                  loading="lazy"
                 />
                 <div
                   className="absolute inset-0 flex items-center justify-center p-4 text-center

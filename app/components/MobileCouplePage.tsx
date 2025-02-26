@@ -40,6 +40,7 @@ function MobileCouplePage() {
               src={foundationImage}
               alt="foundation"
               className="object-cover aspect-square w-[20rem] h-[20rem] rounded-2xl"
+              loading="lazy"
             />
             <div className="text-terracotta font-bold flex flex-col space-y-5">
               <h2 className="text-3xl mr-auto">Our foundation</h2>
@@ -61,6 +62,7 @@ function MobileCouplePage() {
               src={faithImage}
               alt="faith"
               className="scale-[2] object-cover transform translate-x-[-5.5rem] brightness-[.6]"
+              loading="lazy"
             />
             <div className="absolute flex flex-col text-latte font-bold text-center top-[10%] p-10 space-y-5">
               <div className="text-3xl">A love rooted in faith</div>
@@ -96,6 +98,7 @@ function MobileCouplePage() {
               src={backstoryImage}
               alt="backstory"
               className="object-cover rounded-t-[10rem]"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 right-0 text-center pb-4">
               <p className="text-white font-bold text-xl">

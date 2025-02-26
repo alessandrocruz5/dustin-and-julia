@@ -32,7 +32,8 @@ function DesktopCeremonyPage() {
       <RevealOnScroll delay={0.2}>
         <section>
           <div className="h-screen flex flex-col items-center text-terracotta text-center">
-            <Image src={venueImage} alt="monochrome" className="w-[60%]" />
+            <Image src={venueImage} alt="monochrome" className="w-[60%]
+            " loading="lazy" />
             <div className="text-5xl font-bold">The Monochrome, Nuvali</div>
             <div className="text-3xl italic">
               Evozone Avenue, Santa Rosa, Laguna

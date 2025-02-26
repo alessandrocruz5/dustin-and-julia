@@ -29,7 +29,7 @@ function MobileCeremonyPage() {
 
       <RevealOnScroll delay={0.2}>
         <div className="h-screen flex flex-col items-center text-terracotta text-center">
-          <Image src={venueImage} alt="monochrome" className="w-full" />
+          <Image src={venueImage} alt="monochrome" className="w-full" loading="lazy" />
           <div className="text-3xl font-bold">The Monochrome, Nuvali</div>
           <div className="text-xl italic">Evozone Avenue, Santa Rosa, Laguna</div>
         </div>
@@ -46,6 +46,7 @@ function MobileCeremonyPage() {
                 title="WELCOME"
                 subtitle="Monochrome Lobby"
                 height={200}
+
               />
               <ImageCard
                 image={ceremonyImage}
@@ -53,6 +54,7 @@ function MobileCeremonyPage() {
                 title="CEREMONY"
                 height={150}
                 subtitle="Lower Chrome"
+
               />
               <ImageCard
                 image={snacksImage}
@@ -60,6 +62,7 @@ function MobileCeremonyPage() {
                 title="SNACKS"
                 height={150}
                 subtitle="Courtyard"
+
               />
               <ImageCard
                 image={celebrationImage}
