@@ -10,7 +10,6 @@ import treeImage from "@/public/assets/graphics/Palm treeburnt.png";
 import cactusImage from "@/public/assets/graphics/Cactusburnt.png";
 import EntourageCard from "../components/EntourageCard";
 import crossSm from "@/public/assets/graphics/cross-sm.png";
-import Footer from "../components/Footer";
 import PrincipalSponsorCard from "./PrincipalSponsorCard";
 
 import RevealOnScroll from "./RevealOnScroll";
@@ -248,8 +247,6 @@ function MobileEntouragePage() {
           </RevealOnScroll>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }
