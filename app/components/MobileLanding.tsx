@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
+import RevealOnScroll from "./RevealOnScroll";
+
 interface MobileLandingProps {
   image: StaticImageData;
 }
@@ -27,9 +29,11 @@ function MobileLanding({ image }: MobileLandingProps) {
                       transform -translate-y-1/2"
       >
         <div className="space-y-1">
-          <div>Dustin</div>
-          <div>&</div>
-          <div>Julia</div>
+          <RevealOnScroll>
+            <div>Dustin</div>
+            <div>&</div>
+            <div>Julia</div>
+          </RevealOnScroll>
         </div>
       </div>
 
